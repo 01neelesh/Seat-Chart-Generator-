@@ -785,7 +785,7 @@ export default function ExamSeatingChartGenerator() {
         </div>
 
         <div className="mt-6 text-center text-xs text-gray-500">
-          Created by Your School • {new Date().getFullYear()}
+          Made with ❤️ by Neelesh {new Date().getFullYear()}
         </div>
       </div>
     </div>
