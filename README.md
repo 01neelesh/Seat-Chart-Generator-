@@ -2,6 +2,19 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Tech Stack
+* Frontend: React, HTML , CSS ,JS
+
+## Status
+This repository contains the frontend code. Stay tuned for the full-stack implementation!
+
+## Contribution
+Feel free to contribute to this project. Fork, clone, and submit a pull request.
+
+## Contact
+For more information, reach out to [your email/contact info]
+
+
 ## Available Scripts
 
 In the project directory, you can run:
