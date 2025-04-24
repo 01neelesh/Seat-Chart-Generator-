@@ -1,11 +1,20 @@
 import React from 'react'
 import ExamSeatingChartGenerator from './components/ExamSeatingChartGenerator';
+import { FEATURES } from './config';
+import BackendNotification from './components/BackendNotification';
+
 import './App.css';
 
 function App() {
-  return(
+  const [showNotification, setShowNotification] = React.useState(FEATURES.SHOW_MAINTENANCE_NOTIFICATION);
+
+  return (
     <div className='App'>
-<ExamSeatingChartGenerator />
+      <ExamSeatingChartGenerator />
+
+      <BackendNotification
+        isOpen={showNotification}
+        onClose={() => setShowNotification(false)} />
     </div>
   )
 }
