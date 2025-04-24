@@ -1,83 +1,138 @@
-# Getting Started with Create React App
+# 🪑 Exam Seating Chart Generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+  <img src="public/logo512.png" alt="Exam Seating Chart Generator Logo" width="180"/>
+  <br/>
+  <br/>
 
-## Tech Stack
-* Frontend: React, HTML , CSS ,JS
+  ![React](https://img.shields.io/badge/React-18.x-61DAFB?style=for-the-badge&logo=react)
+  ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.x-38B2AC?style=for-the-badge&logo=tailwind-css)
+  ![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)
+  ![PRs](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg?style=for-the-badge)
 
-## Status
-This repository contains the frontend code. Stay tuned for the full-stack implementation!
+  <h3>Create professional exam seating charts with ease</h3>
+</div>
 
-## Contribution
-Feel free to contribute to this project. Fork, clone, and submit a pull request.
+<p align="center">
+  <img src="docs/preview.gif" alt="App Preview" width="80%"/>
+</p>
 
-## Contact
-For more information, reach out to [your email/contact info]
+## ✨ Features
 
+- **📊 Easy Layout Creation** - Import room layouts from Excel or create them manually
+- **👨‍🎓 Student Management** - Upload your student data using Excel spreadsheets
+- **🔄 Multiple Allocation Methods** - Sort by roll number or alphabetically
+- **👁️ Live Preview** - See your seating arrangement before generating
+- **🖨️ PDF Export** - Generate professional printable seating charts
+- **⚡ Responsive Design** - Works on desktop, tablet, and mobile devices
+- **📱 Offline Support** - Generate PDFs even without internet connection
 
-## Available Scripts
+## 🚀 Quick Start
 
-In the project directory, you can run:
+### Prerequisites
 
-### `npm start`
+- Node.js 14+ and npm/yarn
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone the repository
+   ```bash
+   git clone https://github.com/yourusername/exam-seating-chart-generator.git
+   cd exam-seating-chart-generator
+   ```
 
-### `npm test`
+2. Install dependencies
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Set up environment variables
+   ```bash
+   cp .env.example .env
+   # Edit .env file with your configuration
+   ```
 
-### `npm run build`
+4. Start the development server
+   ```bash
+   npm start
+   # or
+   yarn start
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+5. Open [http://localhost:3000](http://localhost:3000) to view the app in your browser
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📝 Usage
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Creating a Seating Chart
 
-### `npm run eject`
+1. **Upload Student Data** - Import an Excel file with student information (name, roll number, and class)
+2. **Configure Room Layout** - Either upload a room matrix Excel file or manually set up rows and columns
+3. **Choose Allocation Method** - Select whether to arrange students by roll number or alphabetically
+4. **Preview Layout** - Check how students will be seated before generating the final chart
+5. **Generate PDF** - Create a professional PDF document ready for printing
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Excel Template Format
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Students Excel Template (students.xlsx)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+| Roll No | Name       | Class    |
+|---------|------------|----------|
+| 12345   | John Doe   | Class 10A|
+| 67890   | Jane Smith | Class 10B|
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### Room Matrix Template (roomMatrix.xlsx)
 
-## Learn More
+| Room No | Rows | Columns | Total Capacity | Students per Seat |
+|---------|------|---------|----------------|-------------------|
+| 101     | 5    | 5       | 25             | 1                 |
+| 102     | 6    | 8       | 48             | 2                 |
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🔧 Technical Details
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Built With
 
-### Code Splitting
+- **Frontend:** React, Tailwind CSS, Lucide Icons
+- **PDF Generation:** Server-side processing with custom templates
+- **Excel Handling:** Custom parser for Excel files
+- **State Management:** React hooks for local state
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Architecture
 
-### Analyzing the Bundle Size
+The application follows a clean, component-based architecture:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
+src/
+├── components/         # UI components
+├── services/           # API and service functions
+├── hooks/              # Custom React hooks
+├── utils/              # Helper functions
+└── assets/             # Static assets
+```
 
-### Making a Progressive Web App
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Contributions are welcome! Feel free to open an issue or submit a pull request.
 
-### Advanced Configuration
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📄 License
 
-### Deployment
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🙏 Acknowledgements
 
-### `npm run build` fails to minify
+- [React](https://reactjs.org/) - Frontend library
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [Lucide Icons](https://lucide.dev/) - Beautiful & consistent icons
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+<div align="center">
+  Made with ❤️ by <a href="https://linkedin.com/in/your-profile">Your Name</a>
+</div>
